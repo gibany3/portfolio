@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge-chrome=1" />
+  <title>Portfolio #Michał Jarosz</title>
+  <meta name="description" content="Witam na mojej oficjalnej stronie www" />
+  <meta name="keywords" content="portfolio, Michał Jarosz, html, css, pierwsze kroki html css" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
+  <script src="jquery.scrollTo.js" type="text/javascript" charset="utf-8"></script>
+  <script src="jquery.localscroll.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+    <div id="nav"> <!--nav bar -->
+      <img src="images/jarosz2.png" width="150px" height="50px" style="float:left; margin: 10px 50px; border: 2px solid black; padding: 3px;">
+      <ul>
+        <a href="#motto"><li>Strona główna</li><a/>
+        <a href="#cv"><li>O mnie</li></a>
+        <a href="#portfolio"><li>Portfolio</li></a>
+        <a href="#kontakt"><li>Kontakt</li></a>
+      </ul>
+    </div> <!--end nav bar -->
+
+    <div class="contentA"> <!--1 sekcja motto -->
+      <div id="motto">
+        <cite>"Ci, którzy są wystarczająco szaleni, by myśleć, że są w stanie zmienić świat, są tymi, którzy go zmieniają." <br><br>
+        <span style="font-style:normal;">Steve Jobs</span></cite>
+      </div>
+    </div><!--end 1 sekcja motto -->
+
+    <div class="contentB" id="cv"><!--2 sekcja O mnie -->
+      <h1>O mnie</h1>
+      <div class="box">
+        <p>Witam! Nazywam się Michał Jarosz, moim miejscem urodzenia jest Łańcut, gdzie mieszkam do dnia dzisiejszego.
+        Stawiam pierwsze kroki w projektowaniu oraz kodowaniu stron WWW przy użyciu najnowszych technologi webowych tj. HTML5, CSS3, JavaScript/jQuery, Ajax, RWD;
+        Serdecznie zapraszam do współpracy!</p>
+      </div>
+      <a href="#motto" class="ups">&#9650;</a>
+    </div><!--end 2 sekcja O mnie -->
+
+    <div class="contentA" id="portfolio"><!--3 sekcja Portfolio -->
+      <h1>Portfolio</h1>
+      <div id="squares">
+        <div class="project"><img src="images/lancut.jpg" alt="www.lancutgada.pl" title="lancutgada.pl" width="250px" height="250px"></div>
+        <div class="project"><img src="images/gry.jpg" alt="www.lancutgada.pl" title="lancutgada.pl" width="250px" height="250px"></div>
+        <div class="project"><img src="images/sokol.jpg" alt="www.lancutgada.pl" title="lancutgada.pl" width="250px" height="250px"></div>
+      </div>
+    </div><!-- end 3 sekcja Portfolio -->
+
+    <div class="contentB" id="kontakt"><!--4 sekcja Kontakt -->
+        <h1>Kontakt</h1>
+        <div id="social">
+          <a href="http://www.facebook.pl" target="_blank" rel="nofollow"><div id="fb"><i class="icon-facebook"></i></div></a>
+          <a href="http://www.twitter.com" target="_blank" rel="nofollow"><div id="tw"><i class="icon-twitter"></i></div></a>
+          <a href="https://www.plus.google.com/" target="_blank" rel="nofollow"><div id="gplus"><i class="icon-gplus"></i></div></a>
+          <a href="http://www.github.com" target="_blank" rel="nofollow"><div id="git"><i class="icon-github-circled"></i></div></a>
+        </div>
+        <div class="box"> Nawiąż ze mną współpracę <hr> <br>
+          Masz do mnie pytanie, chcesz przedstawić swój pomysł? <br><br>
+          Skontaktuj się ze mną korzystając z poniższych danych. <br><br>
+          &#9990; &#43;48 692 389 155 <br>
+          &#9993; <a href="mailto:jaroszmicha88@gmail.com" id="mail">jaroszmichal88@gmail.com</a>
+        </div>
+    </div><!--end 4 sekcja Kontakt -->
+
+    <div class="contentC"></div>
+
+    <div id="footer"><!--footer -->
+      &copy; Michał Jarosz 2016
+    </div><!--end of footer -->
+
+<script type="text/javascript"> 	$(document).ready(function() { 		$.localScroll(); 	}); </script>
+</body>
+</html>
