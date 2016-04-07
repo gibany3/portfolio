@@ -16,13 +16,13 @@
 <body>
 
     <div id="nav"> <!--nav bar -->
-      <img src="images/jarosz2.png" width="150px" height="50px" style="float:left; margin: 10px 50px; border: 2px solid black; padding: 3px;">
-      <ul>
-        <a href="#motto"><li>Strona główna</li><a/>
-        <a href="#cv"><li>O mnie</li></a>
-        <a href="#portfolio"><li>Portfolio</li></a>
-        <a href="#kontakt"><li>Kontakt</li></a>
-      </ul>
+      <div id="menu">
+          <a href="#motto"><div id="img"><img src="images/jarosz.png"></div></a>
+          <a href="#motto" class="squares"><div>Strona główna</div></a>
+          <a href="#cv" class="squares"><div>O mnie</div></a>
+          <a href="#portfolio" class="squares"><div>Portfolio</div></a>
+          <a href="#kontakt" class="squares"><div>Kontakt</div></a>
+      </div>
     </div> <!--end nav bar -->
 
     <div class="contentA"> <!--1 sekcja motto -->
@@ -44,10 +44,10 @@
 
     <div class="contentA" id="portfolio"><!--3 sekcja Portfolio -->
       <h1>Portfolio</h1>
-      <div id="squares">
-        <div class="project"><img src="images/lancut.jpg" alt="www.lancutgada.pl" title="lancutgada.pl" width="250px" height="250px"></div>
-        <div class="project"><img src="images/gry.jpg" alt="www.lancutgada.pl" title="lancutgada.pl" width="250px" height="250px"></div>
-        <div class="project"><img src="images/sokol.jpg" alt="www.lancutgada.pl" title="lancutgada.pl" width="250px" height="250px"></div>
+      <div class="box">
+        <div class="project"><img src="images/lancut.jpg" alt="www.lancutgada.pl" title="lancutgada.pl"></div>
+        <div class="project"><img src="images/gry.jpg" alt="www.lancutgada.pl" title="lancutgada.pl"></div>
+        <div class="project"><img src="images/sokol.jpg" alt="www.lancutgada.pl" title="lancutgada.pl"></div>
       </div>
     </div><!-- end 3 sekcja Portfolio -->
 
