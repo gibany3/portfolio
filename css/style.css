@@ -1,0 +1,111 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1rem;
+  background-color: #009688;
+  font-family: "Roboto Mono", Arial, sans-serif;
+  margin: 0;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.top {
+  padding: 20px;
+}
+
+.name {
+  text-align: center;
+  margin: 100px auto;
+}
+
+.name h1 {
+  font-size: 7.2rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.name p {
+  text-transform: uppercase;
+  margin: 10px;
+  color: #80cbc4;
+}
+
+.name p:nth-child(2) {
+  font-size: 3.6rem;
+  text-transform: capitalize;
+  color: #bfe5e1;
+}
+
+.name p:nth-child(n+3) {
+  font-size: 2.2rem;
+}
+
+.arrow {
+  margin: 0 auto;
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: 300;
+  margin: 100px 0 50px;
+}
+
+.mac {
+  text-align: center;
+  display: block;
+}
+
+.mac figcaption {
+  margin: 20px 0;
+}
+
+.mac figcaption h3 {
+  font-size: 3.6rem;
+  font-weight: 300;
+  margin: 20px 0 0;
+}
+
+.mac figcaption p {
+  margin: 10px;
+}
+
+.mac figcaption p:nth-child(2) {
+  font-size: 2.2rem;
+  color: #bfe5e1;
+}
+
+.mac figcaption p:nth-child(2) a:hover {
+  color: #caf6f2;
+}
+
+.mac figcaption p:nth-child(3) {
+  font-size: 1.6rem;
+  color: #80cbc4;
+}
+
+.contact {
+  background-color: #fff;
+  min-height: 300px;
+  color: #000;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  margin: 20px 0;
+}
+
+.contact h3 {
+  font-size: 3.6rem;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=maps/style.css.map */
