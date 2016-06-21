@@ -5,6 +5,11 @@
              @content;
         }
     }
+    @else if $breakpoint == mobile {
+         @media only #{$media} and (max-width: $mobile){
+            @content;
+        }
+    }
     @else if $breakpoint == tablet {
          @media only #{$media} and (max-width: $tablet){
             @content;

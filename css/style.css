@@ -2,6 +2,12 @@ html {
   font-size: 10px;
 }
 
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 5px;
+  }
+}
+
 body {
   font-size: 1rem;
   background-color: #009688;
@@ -19,15 +25,45 @@ a {
   padding: 20px;
 }
 
+@media only screen and (max-width: 500px) {
+  .top {
+    padding: 10px;
+  }
+}
+
 .name {
   text-align: center;
   margin: 100px auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .name {
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 678px) {
+  .name {
+    margin: 10px auto;
+  }
 }
 
 .name h1 {
   font-size: 7.2rem;
   font-weight: 300;
   margin: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .name h1 {
+    font-size: 7rem;
+  }
+}
+
+@media only screen and (max-width: 678px) {
+  .name h1 {
+    font-size: 5.5rem;
+  }
 }
 
 .name p {
@@ -42,8 +78,20 @@ a {
   color: #bfe5e1;
 }
 
+@media only screen and (max-width: 678px) {
+  .name p:nth-child(2) {
+    font-size: 3rem;
+  }
+}
+
 .name p:nth-child(n+3) {
   font-size: 2.2rem;
+}
+
+@media only screen and (max-width: 678px) {
+  .name p:nth-child(n+3) {
+    font-size: 1.8rem;
+  }
 }
 
 @-webkit-keyframes jump {
@@ -113,6 +161,12 @@ a {
   padding: 10px 40px;
 }
 
+@media only screen and (max-width: 500px) {
+  .arrow {
+    margin: 15px auto;
+  }
+}
+
 .arrow:hover {
   -webkit-animation-name: jump;
           animation-name: jump;
@@ -129,42 +183,60 @@ h2 {
   margin: 70px 0 50px;
 }
 
-.mac {
+@media only screen and (max-width: 678px) {
+  h2 {
+    margin: 0;
+  }
+}
+
+figure.mac {
   text-align: center;
   display: block;
 }
 
-.mac figcaption {
+@media only screen and (max-width: 500px) {
+  figure.mac {
+    margin: 10px 0;
+  }
+}
+
+figure.mac img {
+  width: 100%;
+  max-width: 947px;
+  min-width: 270px;
+  height: auto;
+}
+
+figure.mac figcaption {
   margin: 20px 0;
 }
 
-.mac figcaption h3 {
+figure.mac figcaption h3 {
   font-size: 3.6rem;
   font-weight: 300;
   margin: 20px 0 0;
 }
 
-.mac figcaption p {
+figure.mac figcaption p {
   margin: 10px;
 }
 
-.mac figcaption p:nth-child(2) {
+figure.mac figcaption p:nth-child(2) {
   font-size: 2.2rem;
   color: #bfe5e1;
 }
 
-.mac figcaption p:nth-child(2) a:hover {
+figure.mac figcaption p:nth-child(2) a:hover {
   color: #caf6f2;
 }
 
-.mac figcaption p:nth-child(3) {
+figure.mac figcaption p:nth-child(3) {
   font-size: 1.6rem;
   color: #80cbc4;
 }
 
 .contact {
   background-color: #fff;
-  min-height: 300px;
   color: #000;
   padding: 20px 0;
   text-align: center;
@@ -177,6 +249,12 @@ h2 {
 .contact h3 {
   font-size: 3.6rem;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 678px) {
+  .contact h3 {
+    font-size: 3rem;
+  }
 }
 
 /*# sourceMappingURL=maps/style.css.map */
