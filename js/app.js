@@ -1,21 +1,22 @@
-// $(document).ready(function() {
-document.addEventListener("DOMContentLoaded", function(){
+$(document).ready(function() {
 
-    function animateScroll() {
+//animate scroll
+    $('a[href^="#"]').on('click', function(event) {
 
-        if (document.body.scrollTop <= 0) {
+        var target = $($(this).attr('href'));
 
-            window.scrollBy(0, 5);
-            setTimeout(animateScroll, 5);
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
 
-        };
-    };
-
-  document.querySelector(".arrow").addEventListener("click", function(e) {
-
-  animateScroll();
-  
-
-});
+//hamburger menu
+    $('.hamburger').click(function() {
+        $('.sidebar').toggleClass('sidebar-open');
+        $('.hamburger').toggleClass("is-active");
+    });
 
 });

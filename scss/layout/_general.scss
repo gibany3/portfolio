@@ -1,7 +1,7 @@
 html {
     font-size: 10px;
     @include breakpoint(mobile) {
-      font-size: 5px;
+        font-size: 5px;
     }
 }
 body {
@@ -12,97 +12,156 @@ body {
     color: $colorFont;
 }
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style-type: none;
 }
 .top {
     padding: 20px;
     @include breakpoint(mobile) {
-      padding: 10px;
+        padding: 10px;
     }
-}
-.name {
-    text-align: center;
-    margin: 100px auto;
-    @include breakpoint(mobile) {
-      margin: 10px auto;
-    }
-    @include breakpoint(large-mobile) {
-      margin: 10px auto;
-    }
-    h1 {
-        font-size: 7.2rem;
-        font-weight: 300;
-        margin: 0;
+    .sidebar {
+        width: 180px;
+        position: fixed;
+        z-index: 5;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        background-color: #333;
+        background-color: rgba(51, 51, 51, 0.9);
+        margin-left: -181px;
+        overflow-y: auto;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        font-size: 2rem;
         @include breakpoint(mobile) {
-          font-size: 7rem;
+            font-size: 4rem;
         }
-        @include breakpoint(large-mobile) {
-          font-size: 5.5rem;
+        a {
+            padding: 17px 30px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            text-align: right;
+            opacity: 1;
+            &:hover {
+              color: #bbbbbb;
+            }
         }
-    }
-    p {
-        text-transform: uppercase;
-        margin: 10px;
-        color: #80cbc4;
-    }
-    p:nth-child(2) {
-        font-size: 3.6rem;
-        text-transform: capitalize;
-        color: #bfe5e1;
-        @include breakpoint(large-mobile) {
-          font-size: 3rem;
+        img {
+            height: 25px;
         }
     }
-    p:nth-child(n+3) {
-        font-size: 2.2rem;
+    .sidebar-open {
+        display: block;
+        margin-left: 0;
+    }
+    .name {
+        text-align: center;
+        margin: 100px auto;
+        @include breakpoint(mobile) {
+            margin: 10px auto;
+        }
         @include breakpoint(large-mobile) {
-          font-size: 1.8rem;
+            margin: 10px auto;
+        }
+        @keyframes rotation {
+          0% {
+            transform: rotateX(0deg);
+          }
+          100% {
+            transform: rotateX(360deg);
+          }
+        }
+        h1 {
+            font-size: 7.2rem;
+            font-weight: 300;
+            margin: 0;
+            @include rotation();
+            animation-delay: 1s;
+            @include breakpoint(mobile) {
+                font-size: 7rem;
+            }
+            @include breakpoint(large-mobile) {
+                font-size: 5.5rem;
+            }
+        }
+        p {
+            text-transform: uppercase;
+            margin: 10px;
+            color: #80cbc4;
+        }
+        p:nth-child(2) {
+            font-size: 3.6rem;
+            text-transform: capitalize;
+            color: #bfe5e1;
+            @include rotation();
+            animation-delay: 1.6s;
+            @include breakpoint(large-mobile) {
+                font-size: 3rem;
+            }
+        }
+        p:nth-child(n+3) {
+            font-size: 2.2rem;
+            @include rotation();
+            animation-delay: 2.2s;
+            @include breakpoint(large-mobile) {
+                font-size: 1.8rem;
+            }
         }
     }
 }
 @keyframes jump {
-  0% {
-    bottom: 0;
-  }
-  10% {
-    bottom: 20px;
-  }
-  20% {
-    bottom: 0;
-  }
-  30% {
-    bottom: 15px;
-  }
-  40% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 10px;
-  }
-  60% {
-    bottom: 0;
-  }
-  70% {
-    bottom: 5px;
-  }
-  100% {
-    bottom: 0;
-  }
+    0% {
+        bottom: 0;
+    }
+    10% {
+        bottom: 20px;
+    }
+    20% {
+        bottom: 0;
+    }
+    30% {
+        bottom: 15px;
+    }
+    40% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 10px;
+    }
+    60% {
+        bottom: 0;
+    }
+    70% {
+        bottom: 5px;
+    }
+    100% {
+        bottom: 0;
+    }
 }
 .arrow {
     margin: 0 auto;
     display: block;
     position: relative;
     padding: 10px 40px;
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
     @include breakpoint(mobile) {
-      margin: 15px auto;
+        margin: 15px auto;
     }
-    &:hover {
-      animation-name: jump;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-    }
+    // &:hover {
+    //   animation-name: jump;
+    //   animation-duration: 2s;
+    //   animation-iteration-count: infinite;
+    // }
 }
 h2 {
     text-align: center;
@@ -110,20 +169,20 @@ h2 {
     font-weight: 300;
     margin: 70px 0 50px;
     @include breakpoint(large-mobile) {
-      margin: 0;
+        margin: 0;
     }
 }
 figure.mac {
     text-align: center;
     display: block;
     @include breakpoint(mobile) {
-      margin: 10px 0;
+        margin: 10px 0;
     }
     img {
-      width: 100%;
-      max-width: 947px;
-      min-width: 270px;
-      height: auto;
+        width: 100%;
+        max-width: 947px;
+        min-width: 270px;
+        height: auto;
     }
     figcaption {
         margin: 20px 0;
@@ -160,7 +219,7 @@ figure.mac {
         font-size: 3.6rem;
         font-weight: 300;
         @include breakpoint(large-mobile) {
-              font-size: 3rem;
+            font-size: 3rem;
         }
     }
 }

@@ -1,3 +1,128 @@
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 10px 10px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 999;
+  position: fixed;
+  outline: none;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover .hamburger-inner, .hamburger:hover .hamburger-inner::before, .hamburger:hover .hamburger-inner::after {
+  background-color: #bbb;
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 0;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -8px;
+}
+
+.hamburger-inner::after {
+  bottom: -8px;
+}
+
+/*
+   * Squeeze
+   */
+.hamburger--squeeze .hamburger-inner {
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.14s ease, opacity 0.1s ease;
+  transition: top 0.1s 0.14s ease, opacity 0.1s ease;
+}
+
+.hamburger--squeeze .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.14s ease, -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.14s ease, -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0.14s;
+          transition-delay: 0.14s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.1s ease, opacity 0.1s 0.14s ease;
+  transition: top 0.1s ease, opacity 0.1s 0.14s ease;
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: bottom 0.1s ease, -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease, -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
 html {
   font-size: 10px;
 }
@@ -21,6 +146,10 @@ a {
   color: inherit;
 }
 
+li {
+  list-style-type: none;
+}
+
 .top {
   padding: 20px;
 }
@@ -31,65 +160,155 @@ a {
   }
 }
 
-.name {
+.top .sidebar {
+  width: 180px;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.9);
+  margin-left: -181px;
+  overflow-y: auto;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .top .sidebar {
+    font-size: 4rem;
+  }
+}
+
+.top .sidebar a {
+  padding: 17px 30px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  opacity: 1;
+}
+
+.top .sidebar a:hover {
+  color: #bbbbbb;
+}
+
+.top .sidebar img {
+  height: 25px;
+}
+
+.top .sidebar-open {
+  display: block;
+  margin-left: 0;
+}
+
+.top .name {
   text-align: center;
   margin: 100px auto;
 }
 
 @media only screen and (max-width: 500px) {
-  .name {
+  .top .name {
     margin: 10px auto;
   }
 }
 
 @media only screen and (max-width: 678px) {
-  .name {
+  .top .name {
     margin: 10px auto;
   }
 }
 
-.name h1 {
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+.top .name h1 {
   font-size: 7.2rem;
   font-weight: 300;
   margin: 0;
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @media only screen and (max-width: 500px) {
-  .name h1 {
+  .top .name h1 {
     font-size: 7rem;
   }
 }
 
 @media only screen and (max-width: 678px) {
-  .name h1 {
+  .top .name h1 {
     font-size: 5.5rem;
   }
 }
 
-.name p {
+.top .name p {
   text-transform: uppercase;
   margin: 10px;
   color: #80cbc4;
 }
 
-.name p:nth-child(2) {
+.top .name p:nth-child(2) {
   font-size: 3.6rem;
   text-transform: capitalize;
   color: #bfe5e1;
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 
 @media only screen and (max-width: 678px) {
-  .name p:nth-child(2) {
+  .top .name p:nth-child(2) {
     font-size: 3rem;
   }
 }
 
-.name p:nth-child(n+3) {
+.top .name p:nth-child(n+3) {
   font-size: 2.2rem;
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
 }
 
 @media only screen and (max-width: 678px) {
-  .name p:nth-child(n+3) {
+  .top .name p:nth-child(n+3) {
     font-size: 1.8rem;
   }
 }
@@ -159,21 +378,18 @@ a {
   display: block;
   position: relative;
   padding: 10px 40px;
-}
-
-@media only screen and (max-width: 500px) {
-  .arrow {
-    margin: 15px auto;
-  }
-}
-
-.arrow:hover {
   -webkit-animation-name: jump;
           animation-name: jump;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 500px) {
+  .arrow {
+    margin: 15px auto;
+  }
 }
 
 h2 {
