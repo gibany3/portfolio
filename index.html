@@ -7,11 +7,16 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href="css/hamburgers.css" rel="stylesheet" type="text/css">
+    <link href="css/royalslider.css" rel="stylesheet">
+    <link href="css/rs-default-inverted.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/jquery.royalslider.min.js" />
 </head>
 
 <body>
@@ -39,14 +44,25 @@
         </div>
         <a href="#realizations"><img class="arrow" src="images/arrow.svg" alt="" /></a>
         <h2 id="realizations">Realizacje</h2>
-        <figure class="mac">
+
+        <div class="laptopBg">
+            <img src="images/mac.png" class="imgBg" width="707" height="400">
+            <div id="slider-in-laptop" class="royalSlider rsDefaultInv">
+                <img class="rsImg" src="images/1.jpg">
+                <img class="rsImg" src="images/2.jpg">
+                <img class="rsImg" src="images/3.jpg">
+                <img class="rsImg" src="images/4.jpg">
+            </div>
+        </div>
+
+        <!-- <figure class="mac">
             <img src="images/laptop.png" alt="" />
             <figcaption>
                 <h3>A la carte</h3>
                 <p><a href="http://www.alacartecomms.com/" target="_blank">www.alacartecommons.com</a></p>
                 <p>HTML, CSS, RWD, Sass/gulp</p>
             </figcaption>
-        </figure>
+        </figure> -->
     </section>
     <section class="contact" id="contact">
         <h2>Kontakt</h2>

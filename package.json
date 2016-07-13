@@ -1,18 +1,27 @@
 {
-  "name": "project",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "test2",
-  "main": "index.js",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.12.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "test2"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gibany3"
+    "url": "git+https://github.com/gibany3/portfolio.git"
   },
-  "keywords": [
-    "project_test"
-  ],
-  "author": "Michal",
-  "license": "ISC"
+  "author": "Michał Jarosz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gibany3/portfolio/issues"
+  },
+  "homepage": "https://github.com/gibany3/portfolio#readme"
 }
