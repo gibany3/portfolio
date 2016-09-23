@@ -1,27 +1,26 @@
 {
-  "name": "portfolio",
+  "name": "simple",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {
-    "browser-sync": "^2.12.8",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-sass": "^2.3.1",
-    "gulp-sourcemaps": "^1.6.0"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gibany3/portfolio.git"
+    "url": "git+https://github.com/gibany3/simpleProject.git"
   },
   "author": "Michał Jarosz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gibany3/portfolio/issues"
+    "url": "https://github.com/gibany3/simpleProject/issues"
   },
-  "homepage": "https://github.com/gibany3/portfolio#readme"
+  "homepage": "https://github.com/gibany3/simpleProject#readme",
+  "devDependencies": {
+    "browser-sync": "2.14.0",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "3.1.1",
+    "gulp-sass": "2.3.2",
+    "gulp-sourcemaps": "1.6.0"
+  }
 }
