@@ -1,27 +1,22 @@
 {
-  "name": "portfolio",
+  "name": "Portfolio_jaroszmichal.pl",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "browser-sync": "^2.12.8",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-sass": "^2.3.1",
-    "gulp-sourcemaps": "^1.6.0"
-  },
-  "devDependencies": {},
+  "description": "Portfolio_jaroszmichal.pl",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gibany3/portfolio.git"
+    "url": "https://github.com/gibany3/portfolio"
   },
-  "author": "Michał Jarosz",
+  "author": "Michal",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gibany3/portfolio/issues"
-  },
-  "homepage": "https://github.com/gibany3/portfolio#readme"
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4"
+  }
 }

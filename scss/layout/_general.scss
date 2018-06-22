@@ -153,11 +153,6 @@ li {
     @include breakpoint(mobile) {
         margin: 15px auto;
     }
-    // &:hover {
-    //   animation-name: jump;
-    //   animation-duration: 2s;
-    //   animation-iteration-count: infinite;
-    // }
 }
 
 #slider-in-laptop {
@@ -205,41 +200,41 @@ h2 {
         margin: 0;
     }
 }
-// figure.mac {
-//     text-align: center;
-//     display: block;
-//     @include breakpoint(mobile) {
-//         margin: 10px 0;
-//     }
-//     img {
-//         width: 100%;
-//         max-width: 947px;
-//         min-width: 270px;
-//         height: auto;
-//     }
-//     figcaption {
-//         margin: 20px 0;
-//         h3 {
-//             font-size: 3.6rem;
-//             font-weight: 300;
-//             margin: 20px 0 0;
-//         }
-//         p {
-//             margin: 10px;
-//         }
-//         p:nth-child(2) {
-//             font-size: 2.2rem;
-//             color: #bfe5e1;
-//             a:hover {
-//                 color: #caf6f2;
-//             }
-//         }
-//         p:nth-child(3) {
-//             font-size: 1.6rem;
-//             color: #80cbc4;
-//         }
-//     }
-// }
+ figure.mac {
+     text-align: center;
+     display: block;
+     @include breakpoint(mobile) {
+         margin: 10px 0;
+     }
+     img {
+         width: 100%;
+         max-width: 947px;
+         min-width: 270px;
+         height: auto;
+     }
+     figcaption {
+         margin: 20px 0;
+         h3 {
+             font-size: 3.6rem;
+             font-weight: 300;
+             margin: 20px 0 0;
+         }
+         p {
+             margin: 10px;
+         }
+         p:nth-child(2) {
+             font-size: 2.2rem;
+             color: #bfe5e1;
+             a:hover {
+                 color: #caf6f2;
+             }
+         }
+         p:nth-child(3) {
+             font-size: 1.6rem;
+             color: #80cbc4;
+         }
+     }
+ }
 .contact {
     background-color: #fff;
     color: #000;
